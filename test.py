@@ -2,13 +2,10 @@ from random import seed
 from random import randint
 import time
 from art import text2art
-from colorama import init, Back, Fore, Style
-from sys import platform
+# from colorama import init, Back, Fore, Style
 # remember to run pip install colorama
 # and also pip install art
-if platform == "win32" or platform == "linux2":
-  init(convert=True)
-
+# init(convert=True)
 colors = ["RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA"]
 
 sides = int(input("How many sides should the dice have?\n"))
@@ -24,19 +21,19 @@ else:
       for loop2 in range(13):
         print ("\033[A                                                            \033[A")
       color = colors[loop1]
-      print(getattr(Fore, color) + Style.BRIGHT + art)
+      print(art)
 
       time.sleep(0.075)
     for loop4 in range(2):
       for loop3 in range(13):
         print ("\033[A                                                            \033[A")
-      print(Fore.WHITE + Style.BRIGHT + art)
+      print(art)
       time.sleep(0.5)
       for loop3 in range(13):
         print ("\033[A                                                            \033[A")
-      print(Fore.BLACK + Style.BRIGHT + art)
+      print(art)
       time.sleep(0.5)
     for loop3 in range(13):
       print ("\033[A                                                            \033[A")
-    print(Fore.WHITE + Style.BRIGHT + art)
+    print(art)
     time.sleep(0.5)
