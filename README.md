@@ -1,3 +1,4 @@
 # Dice roller
 
-Certified best project
+To install all required packages, run:
+`pip install -r requirements.txt`
