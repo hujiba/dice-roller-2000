@@ -5,6 +5,7 @@ from art import text2art
 from colorama import init, Back, Fore, Style
 # remember to run pip install colorama
 # and also pip install art
+init(convert=True)
 colors = ["RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA"]
 
 sides = int(input("How many sides should the dice have?\n"))
