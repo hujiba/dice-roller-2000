@@ -22,21 +22,21 @@ else:
       rolled = str(randint(1, sides))
       art = text2art("  " + rolled,font='block',chr_ignore=True) # Return ASCII text with block font
       for loop2 in range(13):
-        print ("\033[A                                                            \033[A")
+        print ("\033[A                                                                        \033[A")
       color = colors[loop1]
       print(getattr(Fore, color) + Style.BRIGHT + art)
 
       time.sleep(0.075)
     for loop4 in range(2):
       for loop3 in range(13):
-        print ("\033[A                                                            \033[A")
+        print ("\033[A                                                                        \033[A")
       print(Fore.WHITE + Style.BRIGHT + art)
       time.sleep(0.5)
       for loop3 in range(13):
-        print ("\033[A                                                            \033[A")
+        print ("\033[A                                                                        \033[A")
       print(Fore.BLACK + Style.BRIGHT + art)
       time.sleep(0.5)
     for loop3 in range(13):
-      print ("\033[A                                                            \033[A")
+      print ("\033[A                                                                        \033[A")
     print(Fore.WHITE + Style.BRIGHT + art)
     time.sleep(0.5)
