@@ -1,3 +1,3 @@
-# dice-thing
+# Dice roller
 
-made for coding club
+Certified best project
