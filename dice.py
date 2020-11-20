@@ -6,7 +6,7 @@ from colorama import init, Back, Fore, Style
 from sys import platform
 # remember to run pip install colorama
 # and also pip install art
-if platform == "win32" or platform == "linux2":
+if platform == "win32":
   init(convert=True)
 
 colors = ["RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA"]
