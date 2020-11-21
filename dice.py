@@ -21,7 +21,7 @@ elif sides > 999999999:
 else:
     for loop1 in range(24):
       seed()
-      rolled = str(randint(69, sides))
+      rolled = str(randint(1, sides))
       art = text2art("  " + rolled,font='block',chr_ignore=True) # Return ASCII text with block font
       for loop2 in range(13):
         print ("\033[A                                                                        \033[A")
