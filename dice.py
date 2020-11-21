@@ -4,8 +4,7 @@ import time
 from art import text2art
 from colorama import init, Back, Fore, Style
 from sys import platform
-# remember to run pip install colorama
-# and also pip install art
+
 if platform == "win32":
   init(convert=True)
 
@@ -13,9 +12,12 @@ colors = ["RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", 
 
 sides = int(input("How many sides should the dice have?\n"))
 if sides == 0:
-  print("you cant do that what were you thinking its 0 how can you have a 0 sided dice like cmon bro youre better than this")
-elif sides > 999:
-  print("if you do that many digits it will probably look bad because of the ascii art sorry")
+  what = text2art("what",font="larry3d")
+  print(getattr(Fore, colors[randint(0, 30)]) + what)
+  #-print(getattr(Fore, GREEN + dumb))
+elif sides > 999999999:
+  no = text2art("please no",font="larry3d")
+  print(getattr(Fore, colors[randint(0, 30)]) + no)
 else:
     for loop1 in range(30):
       seed()
@@ -25,7 +27,7 @@ else:
         print ("\033[A                                                                        \033[A")
       color = colors[loop1]
       print(getattr(Fore, color) + Style.BRIGHT + art)
-      spin = loop1 * loop1 * 0.0005 + 0.05
+      spin = loop1 * loop1 * 0.0003 + 0.05
       time.sleep(spin)
     for loop4 in range(2):
       for loop3 in range(14):
