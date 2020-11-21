@@ -42,3 +42,4 @@ else:
       print ("\033[A                                                                        \033[A")
     print(Fore.WHITE + Style.BRIGHT + "You rolled a:\n" + art)
     time.sleep(0.5)
+
