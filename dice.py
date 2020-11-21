@@ -9,7 +9,7 @@ from sys import platform
 if platform == "win32":
   init(convert=True)
 
-colors = ["RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA"]
+colors = ["RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA"]
 
 sides = int(input("How many sides should the dice have?\n"))
 if sides == 0:
@@ -17,7 +17,7 @@ if sides == 0:
 elif sides > 999:
   print("if you do that many digits it will probably look bad because of the ascii art sorry")
 else:
-    for loop1 in range(24):
+    for loop1 in range(30):
       seed()
       rolled = str(randint(1, sides))
       art = text2art("  " + rolled,font='block',chr_ignore=True) # Return ASCII text with block font
@@ -25,18 +25,18 @@ else:
         print ("\033[A                                                                        \033[A")
       color = colors[loop1]
       print(getattr(Fore, color) + Style.BRIGHT + art)
-
-      time.sleep(0.075)
+      spin = loop1 * loop1 * 0.0005 + 0.05
+      time.sleep(spin)
     for loop4 in range(2):
-      for loop3 in range(13):
+      for loop3 in range(14):
         print ("\033[A                                                                        \033[A")
-      print(Fore.WHITE + Style.BRIGHT + art)
+      print(Fore.WHITE + Style.BRIGHT + "You rolled a:\n" + art)
       time.sleep(0.5)
-      for loop3 in range(13):
+      for loop3 in range(14):
         print ("\033[A                                                                        \033[A")
-      print(Fore.BLACK + Style.BRIGHT + art)
+      print(Fore.BLACK + Style.BRIGHT + "You rolled a:\n" + art)
       time.sleep(0.5)
-    for loop3 in range(13):
+    for loop3 in range(14):
       print ("\033[A                                                                        \033[A")
-    print(Fore.WHITE + Style.BRIGHT + art)
+    print(Fore.WHITE + Style.BRIGHT + "You rolled a:\n" + art)
     time.sleep(0.5)
