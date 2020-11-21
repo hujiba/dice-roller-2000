@@ -19,7 +19,7 @@ elif sides > 999999999:
   no = text2art("please no",font="larry3d")
   print(getattr(Fore, colors[randint(0, 30)]) + no)
 else:
-    for loop5 in range(13):
+    for loop5 in range(7):
       print("\n")
     for loop1 in range(24):
       seed()
