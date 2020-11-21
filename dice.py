@@ -7,7 +7,7 @@ from sys import platform
 
 if platform == "win32":
   init(convert=True)
-# test test test
+
 colors = ["RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA"]
 
 sides = int(input("How many sides should the dice have?\n"))
@@ -19,6 +19,7 @@ elif sides > 999999999:
   no = text2art("please no",font="larry3d")
   print(getattr(Fore, colors[randint(0, 30)]) + no)
 else:
+    print("\n\n\n\n\n\n\n\n\n\n\n\n\n")
     for loop1 in range(24):
       seed()
       rolled = str(randint(1, sides))
@@ -43,4 +44,3 @@ else:
       print ("\033[A                                                                        \033[A")
     print(Fore.WHITE + Style.BRIGHT + "You rolled a:\n" + art)
     time.sleep(0.5)
-    #jfdss
