@@ -7,7 +7,7 @@ from sys import platform
 
 if platform == "win32":
   init(convert=True)
-# test
+# test test test
 colors = ["RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA"]
 
 sides = int(input("How many sides should the dice have?\n"))
