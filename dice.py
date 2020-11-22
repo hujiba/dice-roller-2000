@@ -4,9 +4,10 @@ import time
 from art import text2art
 from colorama import init, Back, Fore, Style
 from sys import platform
+import funfacts
 
 if platform == "win32":
-  init(convert=True)
+  init(convert=True) # idk it just breaks on windows if you dont have it and breaks on linux if you do
 
 colors = ["RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA"]
 
@@ -14,7 +15,6 @@ sides = int(input("How many sides should the dice have?\n"))
 if sides == 0:
   what = text2art("what",font="larry3d")
   print(getattr(Fore, colors[randint(0, 30)]) + what)
-  #-print(getattr(Fore, GREEN + dumb))
 elif sides > 999999999:
   no = text2art("please no",font="larry3d")
   print(getattr(Fore, colors[randint(0, 30)]) + no)
@@ -24,7 +24,7 @@ else:
     for loop1 in range(24):
       seed()
       rolled = str(randint(1, sides))
-      art = text2art("  " + rolled,font='block',chr_ignore=True) # Return ASCII text with block font
+      art = text2art("  " + rolled,font='block',chr_ignore=True)
       for loop2 in range(13):
         print ("\033[A                                                                        \033[A")
       color = colors[loop1]
