@@ -2,9 +2,9 @@ from random import seed
 from random import randint
 
 funfacts = {
-  1: ["1 is the resin identification code used in recycling to identify polyethylene terephthalate", "lmao you got a 1 haha loser", "01 was the former dialing code for Greater London"],
-  2: ["In pre-1972 Indonesian and Malay orthography, 2 was shorthand for the reduplication that forms plurals", "Two is the number of polynucleotide strands in a DNA double helix.", '2 is the ASCII code of "Start of Text".'],
-  3: ["3 is the symbolic representation for Mu, Augustus Le Plongeon's and James Churchward's lost continent.", 'Three is considered a good number in Chinese culture because it sounds like the word "alive", compared to four, which sounds like the word "death"', "In Gaelic games (Gaelic football for men and women, hurling, and camogie), three points are awarded for a goal, scored when the ball passes underneath the crossbar and between the goal posts."],
+  1: ["1 is the resin identification code used in recycling to identify polyethylene terephthalate.", "lmao you got a 1 haha loser", "01 was the former dialing code for Greater London."],
+  2: ["In pre-1972 Indonesian and Malay orthography, 2 was shorthand for the reduplication that forms plurals.", "Two is the number of polynucleotide strands in a DNA double helix.", '2 is the ASCII code of "Start of Text".'],
+  3: ["3 is the symbolic representation for Mu, Augustus Le Plongeon's and James Churchward's lost continent.", 'Three is considered a good number in Chinese culture because it sounds like the word "alive", compared to four, which sounds like the word "death."', "In Gaelic games (Gaelic football for men and women, hurling, and camogie), three points are awarded for a goal, scored when the ball passes underneath the crossbar and between the goal posts."],
   4: ["In Slavic mythology, the god Svetovid has four heads.", "In computing, four bits (half a byte) are sometimes called a nibble.", "In rowing, a four refers to a boat for four rowers, with or without coxswain."],
   5: ["In Hinduism, the god Shiva has five faces and his Mantra is also called Panchakshari (Five Worded) mantra.", "Towards the end of the film Monty Python and the Holy Grail (1975), the character of King Arthur repeatedly confuses the number five with the number three.", "In basketball, under the FIBA (used for all international play, and most non-US leagues) and NCAA women's rule sets, a team begins shooting bonus free throws once its opponent has committed five personal fouls in a quarter."],
   6: ['Sex- is a Latin prefix meaning "six" lmao.', "#6 is the pseudonym of American musician Shawn Crahan, when performing with the band Slipknot", "In Judaism, six symbolic foods placed on the Passover Seder Plate", "The Original Six teams in the National Hockey League are Toronto, Chicago, Montreal, New York, Boston, and Detroit. They are the oldest remaining teams in the league, though not necessarily the first six; they comprised the entire league from 1942 to 1967."],
@@ -92,18 +92,25 @@ funfacts = {
   88: ["88 is a popular ice cream bar manufactured by GB Glace.", "88rising is a hip hop and rap collective and record label consisting of primarily Asian and Asian American artists.", "88 is the name of a gang in the 2006 American film Gridiron Gang starring Dwayne Johnson."],
   89: ["In Rugby, an \"89\" or eight-nine move is a phase following a scrum, in which the number 8 catches the ball and transfers it to number 9 (scrum half).", "89 is the number of units of each colour in the board game Blokus.", "California Proposition 89 was a 2006 California ballot initiative on campaign finance reform."],
   90: ["+90 is the code for international direct dial phone calls to Turkey.", "90 is a semiperfect number because it is equal to the sum of a subset of its divisors.", "Nike Total 90 Apparel is a brand name of football apparel and football equipment from equipment bags to goalkeeper gloves."],
-  # 420: ["the weed number", "420 is the country calling code for Czech Republic.", "lmao its the weed number"],
-  # 666: ["ooooh spooky", "Using gematria, Neron Caesar transliterated from Greek into Hebrew produces the number 666. The Latin spelling of \"Nero Caesar\" transliterated into Hebrew produces the number 616. Thus, in the Bible, 666 may have been a coded reference to Nero, the Roman Emperor from 55 to 68 AD.", "666 was a winning lottery number in the 1980 Pennsylvania Lottery scandal, in which equipment was tampered to favor a 4 or 6 as each of the three individual random digits."],
+  91: ["91 is a solitaire card game where the object is to move cards, so the top cards total 91.", "There is a Swedish comic strip called 91:an.", "Ninety One or 91 is a Kazakhstan Q-pop boy band formed by JUZ Entertainment in 2014."],
+  92: ["The \"Illustrious 92\" or \"Glorious 92\" were Massachusetts legislators who refused to rescind the Massachusetts Circular Letter soliciting other British colonies' support in resistance to the Townshend Acts prior to the American Revolution. Analogous to the number 45 in reference to the protests of John Wilkes against British corruption.", "The 92 Club is a society of association football fans who have attended a home match of all 92 current member clubs of the Premier League and English Football League in England and Wales.", "There are 92 \"atomic elements\" in the Look-and-say sequence, corresponding to the 92 non-transuranic elements in the chemist's periodic table."],
+  93: ["In classical Persian finger counting, the number 93 is represented by a closed fist. Because of this, classical Arab and Persian poets around 1 CE referred to someone's lack of generosity by saying that the person's hand made \"ninety-three\".", "Babia 93 is an album from a Pakistani pop singer Sajjad Ali.", "Ninety-Three (Quatrevingt-treize) is a novel concerning the French Revolution by Victor Hugo."],
+  94: ["Pascal Wehrlein, who drives for Sauber in Formula One in 2017, chooses the number 94.", "Each February, Respiratory Health Association of Metropolitan Chicago hosts Hustle Up the Hancock, a race up 94 floors of the John Hancock Center in Chicago to raise more than $1 million for lung disease research and programs.", "The 94th Infantry Division was a unit of the United States Army in World War II, activated September 15, 1942."], 
+  95: ["CommSuite 95 was a communications software suite of products launched by Delrina in 1995, created for use with Windows 95.", "In Toy Story 3 (2010), Woody is seen driving a steam locomotive at the beginning of the film. The steam locomotive's number is 95 in reference to Lightning McQueen's racing number and (again) the year the first Toy Story was released.", "Followers of the Baháʼí Faith use prayer beads to repeat the prayer Alláh-u-Abhá (God is most glorious) 95 times."],
+  96: ["Ninety Six National Historic Site, in Ninety Six, South Carolina, derives its name from the original settlement's distance in miles from a Cherokee village in the Blue Ridge Mountains.", "The Saab 96 car produced from 1960 to 1966.", "German submarine U-96 was a German U-boat during World War II and subject of the film Das Boot."],
+  97: ["Madden NFL 97 was the first John Madden NFL American football game to be created in the 32-bit gaming era.", "The Old 97's are an alt-country band, which took their name from the song \"The Wreck of the Old ‘97\".", "97 is the eleventh member of the Mian–Chowla sequence."],
+  98: ["Expo '98 was a World's Fair held in Lisbon, Portugal, from May to September 1998.", "Power98FM is an English radio station of SAFRA Radio in Singapore.", "98 is the number of new applicants that Uranohoshi Girls' High School received in Season 2, Episode 7 of the anime series Love Live! Sunshine!! before it closed down."],
+  99: ["In 2012, Caleb Mason, an associate professor at Southwestern University School of Law, wrote a thesis on Jay-Z’s “99 Problems,” analyzing the lyrics and comparing them to the law and its repercussions.", "Outfielder Manny Ramirez was the first Los Angeles Dodger to ever wear the number 99.", "Ninety-nine (ナインティナイン, Naintinain), or Nainai (ナイナイ) is a Japanese comic duo from Osaka working for the entertainment conglomerate Yoshimoto Kogyo. The duo (kombi), consisting of Takashi Okamura as boke (stooge) and Hiroyuki Yabe as tsukkomi (straightman), formed in 1990."],
+  420: ["the weed number", "420 is the country calling code for Czech Republic.", "lmao its the weed number"],
+  666: ["ooooh spooky", "Using gematria, Neron Caesar transliterated from Greek into Hebrew produces the number 666. The Latin spelling of \"Nero Caesar\" transliterated into Hebrew produces the number 616. Thus, in the Bible, 666 may have been a coded reference to Nero, the Roman Emperor from 55 to 68 AD.", "666 was a winning lottery number in the 1980 Pennsylvania Lottery scandal, in which equipment was tampered to favor a 4 or 6 as each of the three individual random digits."],
 }
-seed()
 
-randfact = randint(0, 2)
+# all code below is for testing
 
-keys = len(funfacts.keys())
-
-randnumber = randint(1, keys)
-
-facts = funfacts[randnumber]
-
-print(randnumber)
-print(facts[randfact])
+# seed()
+# randfact = randint(0, 2)
+# keys = len(funfacts.keys())
+# randnumber = randint(1, keys)
+# facts = funfacts[randnumber]
+# print(randnumber)
+# print(facts[randfact])
