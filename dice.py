@@ -51,6 +51,6 @@ else:
     try:
       numFacts = funfacts.funfacts[int(rolled)]
       fact = numFacts[randFact]
-      print(fact)
+      print("Fun fact: " + fact)
     except KeyError:
       pass
