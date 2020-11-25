@@ -32,7 +32,7 @@ while loop == 1:
           for loop2 in range(13):
             print ("\033[A                                                                                       \033[A")
           pickedColor = (loop1 + colorRandom)
-          try:
+          try: # solution for looping over the list of colors. probably not the best way but whatever
             color = colors[pickedColor]
           except:
             try:
@@ -74,7 +74,10 @@ while loop == 1:
         try:
           numFacts = funfacts.funfacts[int(rolled)]
           fact = numFacts[randFact]
-          print("Fun fact: " + fact + "\n")
+          if fact[-1] in [".", ".\""]: #adds a period at the end if it doesnt have one
+            print("Fun fact: " + fact + "\n")
+          else:
+            print("Fun fact: " + fact + ".\n")
         except KeyError:
           pass
   except:
