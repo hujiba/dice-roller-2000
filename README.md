@@ -1,4 +1,4 @@
-# Dice roller
+# Dice Roller 2000
 
 Have you ever thought... "My random number generator doesn't have enough features"? Well, we have a product for you!
 
