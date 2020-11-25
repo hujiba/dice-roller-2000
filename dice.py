@@ -10,9 +10,10 @@ if platform == "win32":
   init(convert=True) # idk it just breaks on windows if you dont have it and breaks on linux if you do
 
 loop = 1
-colors = ["RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA", "RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA"]
+colors = ["RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA"]
 
 while loop == 1:
+  colorRandom = randint(0, 5)
   try:
     sides = int(input("How many sides should the dice have?\n"))
     if sides == 0:
@@ -24,13 +25,32 @@ while loop == 1:
     else:
         for loop5 in range(7):
           print("\n")
-        for loop1 in range(randint(20, 24)):
+        for loop1 in range(24):
           seed()
           rolled = str(randint(1, sides))
           art = text2art("  " + rolled,font='block',chr_ignore=True)
           for loop2 in range(13):
             print ("\033[A                                                                                       \033[A")
-          color = colors[loop1]
+          pickedColor = (loop1 + colorRandom)
+          try:
+            color = colors[pickedColor]
+          except:
+            try:
+              color = colors[(pickedColor - 6)]
+            except:
+              try:
+                color = colors[(pickedColor - 12)]
+              except:
+                try:
+                  color = colors[(pickedColor - 18)]
+                except:
+                  try:
+                    color = colors[(pickedColor - 24)]
+                  except:
+                    try:
+                      color = colors[(pickedColor - 30)]
+                    except:
+                      print("what")
           print(getattr(Fore, color) + Style.BRIGHT + art)
           spin = loop1 * loop1 * 0.0011 + 0.05
           time.sleep(spin)
