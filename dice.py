@@ -75,9 +75,9 @@ while loop == 1:
           numFacts = funfacts.funfacts[int(rolled)]
           fact = numFacts[randFact]
           if fact[-1] in [".", ".\""]: #adds a period at the end if it doesnt have one
-            print("Fun fact: " + fact + "\n")
+            print(Style.BRIGHT + "Fun fact: " + fact + "\n")
           else:
-            print("Fun fact: " + fact + ".\n")
+            print(Style.BRIGHT + "Fun fact: " + fact + ".\n")
         except KeyError:
           pass
   except:
