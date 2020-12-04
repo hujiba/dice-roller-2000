@@ -10,12 +10,33 @@ if platform == "win32":
   init(convert=True) # idk it just breaks on windows if you dont have it and breaks on linux if you do
 
 loop = 1
+yn = 0
 colors = ["RED", "YELLOW", "BLUE", "CYAN", "GREEN", "MAGENTA"]
+
+try:
+  readprefs = open("preferences.txt", "r")
+except:
+  while yn == 0:
+    preference = input("Would you like to see fun facts about the numbers you roll? (y/n)\n")
+    if preference == "y" or preference == "Y" or preference == "yes" or preference == "Yes":
+      f = open("preferences.txt", "a")
+      f.write("true")
+      f.close()
+      yn = 1
+      print("Preferences saved! If you change your mind, you can edit preferences.txt and change it to \"false\".")
+    elif preference == "n" or preference == "N" or preference == "no" or preference == "No":
+      f = open("preferences.txt", "a")
+      f.write("false")
+      f.close()
+      yn = 1
+      print("Preferences saved! If you change your mind, you can edit preferences.txt and change it to \"true\".")
+    else:
+      print("it's a yes or no question is it really that hard")
 
 while loop == 1:
   colorRandom = randint(0, 5)
   try:
-    sides = int(input("How many sides should the dice have?\n"))
+    sides = int(input(Style.BRIGHT + "How many sides should the dice have?\n"))
     if sides == 0:
       what = text2art("what",font="larry3d")
       print(getattr(Fore, colors[randint(0, 5)]) + what)
@@ -70,16 +91,17 @@ while loop == 1:
         time.sleep(0.5)
 
         randFact = randint(0, 2)
-
-        try:
-          numFacts = funfacts.funfacts[int(rolled)]
-          fact = numFacts[randFact]
-          if fact[-1] in [".", ".\""]: #adds a period at the end if it doesnt have one
-            print(Style.BRIGHT + "Fun fact: " + fact + "\n")
-          else:
-            print(Style.BRIGHT + "Fun fact: " + fact + ".\n")
-        except KeyError:
-          pass
+        pref = readprefs.readline()
+        if pref == "true":
+          try:
+            numFacts = funfacts.funfacts[int(rolled)]
+            fact = numFacts[randFact]
+            if fact[-1] in [".", ".\""]: #adds a period at the end if it doesnt have one
+              print(Style.BRIGHT + "Fun fact: " + fact + "\n")
+            else:
+              print(Style.BRIGHT + "Fun fact: " + fact + ".\n")
+          except KeyError:
+            pass
   except:
     print("Please enter a number!\n")
   
