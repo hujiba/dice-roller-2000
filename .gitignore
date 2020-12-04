@@ -134,3 +134,4 @@ dist/
 build/
 *.spec
 __pycache__/
+preferences.txt
